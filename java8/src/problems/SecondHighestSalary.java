@@ -11,8 +11,10 @@ public class SecondHighestSalary {
         return employes
                 .stream()
                 .sorted(Comparator
-                        .comparingDouble(Employee::getSalary)
-                        .reversed()).skip(1)
+                        .comparingDouble(Employee
+                                ::getSalary)
+                        .reversed())
+                .skip(1)
                 .findFirst()
                 .get();
 
