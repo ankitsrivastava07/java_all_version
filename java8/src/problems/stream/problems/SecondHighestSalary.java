@@ -8,9 +8,8 @@ import java.util.List;
 
 public class SecondHighestSalary {
 
-    public static Employee secondHighestSalary(List<Employee> employes) {
-
-        return employes
+    public static Employee secondHighestSalary(List<Employee> employees) {
+        return employees
                 .stream()
                 .sorted(Comparator
                         .comparingDouble(Employee
@@ -28,7 +27,6 @@ public class SecondHighestSalary {
                 "Srivastava",
                 "ankit@gmail.com",
                 "ankit@123"
-
         );
 
         Employee e2 = new Employee(3550d,

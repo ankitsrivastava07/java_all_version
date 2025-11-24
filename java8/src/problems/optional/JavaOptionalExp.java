@@ -23,9 +23,8 @@ public class JavaOptionalExp {
     public static void main(String[] args) {
 
 
-
         JavaOptionalExp javaOptionalExp = new JavaOptionalExp();
-        javaOptionalExp.applyMultipleSorting();
+        //javaOptionalExp.applyMultipleSorting();
     }
 
 }

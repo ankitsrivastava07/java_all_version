@@ -7,7 +7,6 @@ import problems.lambda.Calculator;
 import problems.lambda.MessageService;
 import problems.function.dto.MailDto;
 
-import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class MainApplication {
@@ -47,11 +46,12 @@ public class MainApplication {
         Integer num = 9;
         System.out.println(predicate.test(num));
 
-        EmployeeEntity employeeEntity = new EmployeeEntity();
-        employeeEntity.setFirstName("Ankit");
-        employeeEntity.setLastName("Srivastava");
-        employeeEntity.setEmail("ankit@gmail.com");
-        employeeEntity.setPassword("abc");
+        EmployeeEntity employeeEntity = new EmployeeEntity(
+                "Ankit",
+                "Srivastava",
+                "ankit@gmail.com",
+                "abc",
+                12000d);
 
         CustomFunction<EmployeeEntity, EmployeeDto> customFunction = (empEntity) -> {
 
@@ -62,5 +62,8 @@ public class MainApplication {
             e1.setPassword(empEntity.getPassword());
             return e1;
         };
+
+        System.out.println(customFunction.apply(employeeEntity));
+
     }
 }

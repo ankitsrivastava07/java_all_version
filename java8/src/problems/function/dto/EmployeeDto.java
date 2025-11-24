@@ -5,6 +5,8 @@ public class EmployeeDto {
     private String firstName;
     private String lastName;
     private String mail;
+    private String password;
+
 
     public String getFirstName() {
         return firstName;
@@ -38,7 +40,14 @@ public class EmployeeDto {
         this.password = password;
     }
 
-    private String password;
+    @Override
+    public String toString() {
 
+        return "[First Name = "
+                + firstName
+                + " , Last Name = "
+                + lastName + " , Email = "
+                + mail + " , Password = " + password + " ] ";
+    }
 
 }
