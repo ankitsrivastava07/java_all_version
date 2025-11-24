@@ -1,8 +1,10 @@
-package problems;
+package problems.stream.problems;
+
+import problems.stream.problems.dto.Employee;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Comparator;
+import java.util.List;
 
 public class SecondHighestSalary {
 
@@ -21,11 +23,13 @@ public class SecondHighestSalary {
     }
 
     public static void main(String[] args) {
-        Employee e1 = new Employee(3550001d,
+        Employee e1 = new Employee(10000d,
                 "Ankit",
                 "Srivastava",
                 "ankit@gmail.com",
-                "ankit@123");
+                "ankit@123"
+
+        );
 
         Employee e2 = new Employee(3550d,
                 "Ankit",
@@ -58,40 +62,3 @@ public class SecondHighestSalary {
     }
 }
 
-class Employee {
-
-    double salary;
-    String firstName;
-    String lastName;
-    String email;
-    String password;
-
-    Employee(double salary, String firstName, String lastName, String email, String password) {
-        this.salary = salary;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-}
